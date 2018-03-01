@@ -505,24 +505,6 @@ func TestDecode_DecodeHookType(t *testing.T) {
 	}
 }
 
-func TestDecode_Nil(t *testing.T) {
-	t.Parallel()
-
-	var input interface{}
-	result := Basic{
-		Vstring: "foo",
-	}
-
-	err := Decode(input, &result)
-	if err != nil {
-		t.Fatalf("err: %s", err)
-	}
-
-	if result.Vstring != "foo" {
-		t.Fatalf("bad: %#v", result.Vstring)
-	}
-}
-
 func TestDecode_NilInterfaceHook(t *testing.T) {
 	t.Parallel()
 
