@@ -109,12 +109,12 @@ func TestNestedTypeSliceWithDefaults(t *testing.T) {
 	input := map[string]interface{}{
 		"vfoo": "foo",
 		"vbars": []map[string]interface{}{
-			{"vstring": "foo", "vint": 42, "vbool": true},
-			{"vint": 42, "vbool": true},
+			{"vstring": "foo", "vuint": 42, "vbool": true},
+			{"vuint": 42, "vbool": true},
 		},
 		"vempty": []map[string]interface{}{
-			{"vstring": "foo", "vint": 42, "vbool": true},
-			{"vint": 42, "vbool": true},
+			{"vstring": "foo", "vuint": 42, "vbool": true},
+			{"vuint": 42, "vbool": true},
 		},
 	}
 
